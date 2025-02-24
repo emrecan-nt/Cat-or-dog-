@@ -1,3 +1,5 @@
+import 'package:cat_or_dog/function.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -61,7 +63,11 @@ class HomePage extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: GestureDetector(
                 onTap: () {
-                  print("tıklandı");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ClassificationScreen()),
+                  );
                 },
                 child: Container(
                   width: 238,
@@ -87,6 +93,17 @@ class HomePage extends StatelessWidget {
               ),
             )
           ],
-        ));
+        ),
+       bottomNavigationBar: Padding(padding: EdgeInsets.all(8),
+       child: Text('Developed by Emre Mızrak © 2025',
+       style: TextStyle(
+        fontSize: 12,
+        color: Colors.black,
+        
+       ),
+       textAlign: TextAlign.center,
+       ),
+       ),
+        );
   }
 }
