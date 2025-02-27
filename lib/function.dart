@@ -109,27 +109,22 @@ class _ClassificationScreenState extends State<ClassificationScreen> {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
+    backgroundColor: Color(0xFFF3F0DA),
 
     appBar:  AppBar(
-          backgroundColor: Color(0xFFC2FB09),
+          backgroundColor: Color(0xFFF3F0DA),
           centerTitle: true,
-          title: SizedBox(
-            width: 261,
-            height: 73,
-            child: SizedBox(
-              width: 261,
-              height: 73,
-              child: Text(
-                'Estimating...',
-                style: GoogleFonts.inriaSerif(
-                  color: Color(0xFF2C056E),
-                  fontSize: 36,
-                  fontWeight: FontWeight.normal,
+          title: Text(
+                'Görsel inceleniyor...',
+                style: GoogleFonts.inter(
+                  color:Color(0xFF6B898C),
+                  fontSize: 28,
+                  fontWeight: FontWeight.w200,
                 ),
               ),
             ),
-          ),
-        ),
+          
+        
     body: _busy
         ? Center(child: CircularProgressIndicator())
         : _image == null
